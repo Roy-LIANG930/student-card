@@ -117,10 +117,10 @@ h1 { margin: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.15; letter-spa
 
 .photo-frame {
   position: absolute;
-  top: 33.5%;
+  top: 31.8%;
   right: 8.2%;
-  width: 18.5%;
-  height: 43.5%;
+  width: 18.3%;
+  height: 41.5%;
   overflow: hidden;
   background: #fdfcfb;
 }
