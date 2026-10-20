@@ -57,7 +57,17 @@
     }
   }
 
-  appendRotatedCrop(document.getElementById("signature-ink"), data.signatureImage);
+  const signature = document.getElementById("signature-ink");
+  if (signature && data.signatureImage?.src) {
+    if (data.signatureImage.crop) {
+      appendRotatedCrop(signature, data.signatureImage);
+    } else {
+      const image = document.createElement("img");
+      image.src = data.signatureImage.src;
+      image.alt = "";
+      signature.appendChild(image);
+    }
+  }
 
   document.getElementById("print-button")?.addEventListener("click", () => window.print());
 })();

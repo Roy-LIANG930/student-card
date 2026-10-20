@@ -4,7 +4,7 @@
 
 ## 修改内容
 
-打开 `config.js`，修改姓名、学年、编号等字段。当前人像和手写签名均从提供的原图中裁取。若要改用单独的证件照，将照片放到 `assets/`，并在同一个配置文件中设置：
+打开 `config.js`，修改姓名、学年、编号等字段。当前人像从提供的原图中裁取；手写签名由原图提取为透明的 `assets/signature.png`，没有重画笔迹。若要改用单独的证件照，将照片放到 `assets/`，并在同一个配置文件中设置：
 
 ```js
 photo: {
@@ -12,6 +12,8 @@ photo: {
   src: "./assets/your-photo.jpg"
 }
 ```
+
+更换签名时，把新图片放到 `assets/`，再修改 `config.js` 中的 `signatureImage.src`。需要从当前原图重新提取签名时，可运行 `scripts/extract_signature.py`。
 
 推送修改后的文件与照片，GitHub Pages 会自动更新网页。
 

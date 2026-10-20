@@ -19,7 +19,6 @@ window.STUDENT_CARD_CONFIG = {
     crop: { x: 215, y: 1225, width: 545, height: 370, rotation: -90 }
   },
   signatureImage: {
-    src: "./assets/photo-source.jpg",
-    crop: { x: 238, y: 730, width: 55, height: 200, rotation: -90 }
+    src: "./assets/signature.png"
   }
 };

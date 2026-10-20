@@ -164,11 +164,8 @@ h1 { margin: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.15; letter-spa
   width: 68%;
   aspect-ratio: 200 / 55;
   overflow: hidden;
-  mix-blend-mode: multiply;
-  filter: grayscale(1) contrast(3.6) brightness(1.18);
-  opacity: .94;
 }
-.signature-ink svg { display: block; width: 100%; height: 100%; }
+.signature-ink svg, .signature-ink img { display: block; width: 100%; height: 100%; }
 
 .brand-back { top: 8.2%; right: 6.2%; }
 .back-title {
