@@ -14,27 +14,14 @@ button { font: inherit; }
   width: calc(100% - 48px);
   max-width: 1160px;
   margin: 0 auto;
-  padding: 54px 0 70px;
+  padding: 32px 0 70px;
 }
 
 .page-header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 36px;
+  justify-content: flex-end;
+  margin-bottom: 26px;
 }
-
-.eyebrow {
-  margin: 0 0 10px;
-  color: #8d262b;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .18em;
-}
-
-h1 { margin: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.15; letter-spacing: -.035em; }
-.subtitle { margin: 11px 0 0; color: #74706d; font-size: 14px; }
 
 .print-button {
   display: inline-flex;
@@ -57,8 +44,7 @@ h1 { margin: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.15; letter-spa
 
 .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
 .card-panel { min-width: 0; }
-.panel-heading { display: flex; align-items: baseline; justify-content: space-between; margin: 0 2px 13px; }
-.panel-heading h2 { margin: 0; font-size: 15px; font-weight: 700; }
+.panel-heading { display: flex; justify-content: flex-end; margin: 0 2px 13px; }
 .panel-heading span { color: #96918c; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
 
 .student-card {
@@ -226,17 +212,13 @@ h1 { margin: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.15; letter-spa
 .back-footer a { color: #555; font-weight: 700; text-decoration: none; white-space: nowrap; }
 .back-footer a:hover { text-decoration: underline; }
 
-.page-note { margin: 26px 0 0; color: #817c77; font-size: 12px; text-align: center; }
-
 @media (max-width: 900px) {
-  .page { width: calc(100% - 32px); max-width: 600px; padding: 35px 0 55px; }
-  .page-header { align-items: flex-start; margin-bottom: 29px; }
+  .page { width: calc(100% - 32px); max-width: 600px; padding: 24px 0 55px; }
+  .page-header { margin-bottom: 25px; }
   .card-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 
 @media (max-width: 510px) {
-  .page-header { display: block; }
-  .print-button { margin-top: 20px; width: 100%; }
   .student-details { top: 28%; }
   .back-title { font-size: 5.15cqw; }
   .back-footer { font-size: 2.05cqw; }
@@ -246,7 +228,7 @@ h1 { margin: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.15; letter-spa
   @page { size: A4 portrait; margin: 18mm; }
   :root { background: white; }
   .page { width: 100%; max-width: none; padding: 0; }
-  .page-header, .panel-heading, .page-note { display: none; }
+  .page-header, .panel-heading { display: none; }
   .card-grid { display: flex; flex-direction: column; align-items: center; gap: 18mm; }
   .card-panel { width: 154mm; break-inside: avoid; }
   .student-card { box-shadow: none; print-color-adjust: exact; -webkit-print-color-adjust: exact; }

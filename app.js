@@ -5,7 +5,6 @@
   if (!data) return;
 
   const fields = {
-    "page-year": data.academicYear,
     year: data.academicYear,
     "last-name": data.lastName,
     "first-name": data.firstName,
