@@ -161,7 +161,7 @@ h1 { margin: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.15; letter-spa
 .signature-block strong { font-size: clamp(7px, 1.55cqw, 10px); }
 .signature-ink {
   display: block;
-  width: 68%;
+  width: 76%;
   aspect-ratio: 200 / 55;
   overflow: hidden;
 }
