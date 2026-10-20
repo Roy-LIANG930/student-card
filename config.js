@@ -16,7 +16,7 @@ window.STUDENT_CARD_CONFIG = {
     mode: "crop",
     src: "./assets/photo-source.jpg",
     // 原图中的证件照区域，以原图像素表示；会在页面中旋转为竖直方向。
-    crop: { x: 205, y: 1210, width: 585, height: 390, rotation: -90 }
+    crop: { x: 215, y: 1225, width: 545, height: 370, rotation: -90 }
   },
   signatureImage: {
     src: "./assets/photo-source.jpg",
