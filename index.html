@@ -19,7 +19,20 @@
         </button>
       </header>
 
-      <div class="card-grid" aria-label="Recto et verso de la carte">
+      <div class="card-grid" aria-label="Verso puis recto de la carte">
+        <section class="card-panel" aria-label="Verso">
+          <div class="panel-heading"><span>VERSO</span></div>
+          <article class="student-card card-back" aria-label="Verso de la carte étudiante">
+            <div class="brand brand-back" aria-label="le cnam"><span>le&nbsp;</span>cnam</div>
+            <div class="back-title">CARTE DE <strong>SCOLARITÉ</strong></div>
+            <div class="gray-band" aria-hidden="true"></div>
+            <div class="back-footer">
+              <div><span id="institution"></span><br /><span id="address"></span></div>
+              <a id="website" href="https://www.cnam.fr/" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+          </article>
+        </section>
+
         <section class="card-panel" aria-label="Recto">
           <div class="panel-heading"><span>RECTO</span></div>
           <article class="student-card card-front" aria-label="Recto de la carte étudiante">
@@ -43,18 +56,6 @@
           </article>
         </section>
 
-        <section class="card-panel" aria-label="Verso">
-          <div class="panel-heading"><span>VERSO</span></div>
-          <article class="student-card card-back" aria-label="Verso de la carte étudiante">
-            <div class="brand brand-back" aria-label="le cnam"><span>le&nbsp;</span>cnam</div>
-            <div class="back-title">CARTE DE <strong>SCOLARITÉ</strong></div>
-            <div class="gray-band" aria-hidden="true"></div>
-            <div class="back-footer">
-              <div><span id="institution"></span><br /><span id="address"></span></div>
-              <a id="website" href="https://www.cnam.fr/" target="_blank" rel="noopener noreferrer"></a>
-            </div>
-          </article>
-        </section>
       </div>
     </main>
   </body>
