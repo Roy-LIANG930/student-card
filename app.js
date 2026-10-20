@@ -26,23 +26,29 @@
   const website = document.getElementById("website");
   if (website) website.href = data.websiteUrl || "https://www.cnam.fr/";
 
-  const photoFrame = document.getElementById("photo-frame");
-  const photo = data.photo;
-  if (photoFrame && photo?.src) {
-    if (photo.mode === "crop" && photo.crop) {
-      const { x, y, width, height, rotation } = photo.crop;
-      // SVG 的 viewBox 将原始横置照片中的人像裁出，并保持图片文件本身不变。
+  function appendRotatedCrop(target, source) {
+    if (!target || !source?.src || !source.crop) return;
+    const { x, y, width, height, rotation } = source.crop;
+    if (rotation !== -90) return;
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
       svg.setAttribute("viewBox", `0 0 ${height} ${width}`);
       svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
       svg.setAttribute("aria-hidden", "true");
-      image.setAttribute("href", photo.src);
+      image.setAttribute("href", source.src);
       image.setAttribute("width", "1080");
       image.setAttribute("height", "1920");
       image.setAttribute("transform", `translate(${-y} ${x + width}) rotate(${rotation})`);
       svg.appendChild(image);
-      photoFrame.appendChild(svg);
+      target.appendChild(svg);
+  }
+
+  const photoFrame = document.getElementById("photo-frame");
+  const photo = data.photo;
+  if (photoFrame && photo?.src) {
+    if (photo.mode === "crop" && photo.crop) {
+      // SVG 只显示原图中的证件照区域，不改动照片文件。
+      appendRotatedCrop(photoFrame, photo);
     } else {
       const image = document.createElement("img");
       image.src = photo.src;
@@ -50,6 +56,8 @@
       photoFrame.appendChild(image);
     }
   }
+
+  appendRotatedCrop(document.getElementById("signature-ink"), data.signatureImage);
 
   document.getElementById("print-button")?.addEventListener("click", () => window.print());
 })();
