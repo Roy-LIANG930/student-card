@@ -1,5 +1,13 @@
-(function () {
+(async function () {
   "use strict";
+
+  // A fresh URL keeps GitHub Pages/browser caches from serving old card data.
+  // Future details can still be updated by editing only config.js.
+  try {
+    await import(`./config.js?updated=${Date.now()}`);
+  } catch {
+    return;
+  }
 
   const data = window.STUDENT_CARD_CONFIG;
   if (!data) return;
