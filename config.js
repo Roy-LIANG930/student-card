@@ -1,6 +1,6 @@
 /* 日后只需修改这个文件中的文字或照片路径，再推送到 GitHub。 */
 window.STUDENT_CARD_CONFIG = {
-  academicYear: "2024/2025",
+  academicYear: "2026-2027",
   lastName: "LIANG",
   firstName: "Jingtao",
   birthDate: "30/09/2001",
